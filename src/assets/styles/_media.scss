@@ -1,0 +1,7 @@
+$tablet-breakpoint: 768;
+
+@mixin tablet {
+  @media only screen and (min-width: (($tablet-breakpoint + 1) * 1px)) {
+    @content;
+  }
+}

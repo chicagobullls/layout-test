@@ -1,0 +1,12 @@
+# Folders
+node_modules/
+public/
+dist/
+.nuxt/
+
+# Files
+tsconfig.json
+
+# Extensions
+*.yaml
+*.conf
