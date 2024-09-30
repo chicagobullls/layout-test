@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ProductList from '@/components/ProductsList.vue'
+import ProductList from '@/components/ProductsList/ProductsList.vue'
 import HeadBanner from '@/components/HeadBanner/HeadBanner.vue'
-import ProductCard from '@/components/ProductCard.vue'
+import ProductCard from '@/components/ProductCard/ProductCard.vue'
 
 import { productListConfig } from '@/assets/mocks/productList.config'
 import { computed } from 'vue'
