@@ -13,7 +13,7 @@ import pumpkinTablet from '@/assets/images/pumpkin-tablet.png'
         <span class="aside-block__title-container-title">{{ bannerConfig.asideBlock.title }}</span>
       </div>
       <p class="aside-block__description">{{ bannerConfig.asideBlock.description }}</p>
-      <a class="aside-block__link" :href="bannerConfig.asideBlock.url">ЕЩЕ О ВЫСТАВКЕ</a>
+      <a class="aside-block__link" :href="bannerConfig.asideBlock.url">еще о выставке</a>
     </div>
     <picture>
       <source media="(max-width: 768px)" :srcset="pumpkinMobile" />
