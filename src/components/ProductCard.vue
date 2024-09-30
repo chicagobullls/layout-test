@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 interface ProductCardProps {
   title: string
   price: number
@@ -14,7 +12,7 @@ defineProps<ProductCardProps>()
   <article class="product-card">
     <div class="product-card__content">
       <a class="product-card__link" href="#" />
-      <img class="product-card__image" :src="`/src/assets/images/${imgSrc}`" :alt="title" />
+      <img class="product-card__image" :src="imgSrc" :alt="title" />
       <div class="product-card__info">
         <h3 class="product-card__title">{{ title }}</h3>
         <p class="product-card__price">{{ price }} ₽</p>

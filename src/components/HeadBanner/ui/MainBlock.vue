@@ -10,7 +10,9 @@ const backgroundGradient = computed(() => bannerConfig.mainBlock.backgroundGradi
 
 <template>
   <div class="main-block">
-    <div class="main-block__overlay" :style="{ background: backgroundGradient }" />
+    <div class="main-block__overlay-wrapper">
+      <div class="main-block__overlay" :style="{ background: backgroundGradient }" />
+    </div>
     <picture>
       <source media="(max-width: 768px)" :srcset="patisonsMobile" />
       <source media="(min-width: 769px)" :srcset="patisonsTablet" />
@@ -40,6 +42,7 @@ const backgroundGradient = computed(() => bannerConfig.mainBlock.backgroundGradi
   width: 100%;
   min-height: 400px;
   padding: 20px;
+  border-radius: 10px 10px 0 0;
 
   @include tablet {
     padding: 36px 30px 37px;
@@ -88,6 +91,19 @@ const backgroundGradient = computed(() => bannerConfig.mainBlock.backgroundGradi
     }
   }
 
+  &__overlay-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: var(--z-index-3);
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+
   &__overlay,
   &__image,
   &__content {
@@ -100,15 +116,13 @@ const backgroundGradient = computed(() => bannerConfig.mainBlock.backgroundGradi
   }
 
   &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+
 
 
     width: 100%;
     height: 100%;
 
-    z-index: var(--z-index-3);
+
     transform: rotate(180deg);
 
     @include tablet {
