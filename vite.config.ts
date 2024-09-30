@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   resolve: {
@@ -12,6 +11,7 @@ export default defineConfig({
       mocks: path.resolve(__dirname, '/src/assets/mocks'),
     },
   },
+  base: '/layout-test/',
   server: {
     host: '0.0.0.0',
     port: 3000,
@@ -22,7 +22,7 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html'), // Основной файл входа
+        main: path.resolve(__dirname, 'index.html'),
       },
     },
   },
