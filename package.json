@@ -13,8 +13,10 @@
     "gh-pages": "^6.1.1",
     "prettier": "^3.3.3",
     "scss": "^0.2.4",
+    "swagger-ui-dist": "^5.17.14",
     "vite-plugin-vue": "^0.0.1",
     "vue": "^3.4.37",
+    "vue-router": "^4.4.5",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
