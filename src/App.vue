@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import PageIndex from './pages/index.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <div class="main">
-    <nav>
-      <router-link to="/">Главная</router-link> |
-      <router-link to="/docs">О нас</router-link>
-    </nav>
+    <router-view />
   </div>
 </template>
 

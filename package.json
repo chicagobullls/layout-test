@@ -10,6 +10,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@types/swagger-ui-dist": "^3.30.5",
     "gh-pages": "^6.1.1",
     "prettier": "^3.3.3",
     "scss": "^0.2.4",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.7.3",
+    "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^5.1.2",
     "sass": "^1.79.4",
     "typescript": "^5.5.3",

@@ -1,39 +1,19 @@
 <script setup lang="ts">
-import ProductList from '@/components/ProductsList/ProductsList.vue'
-import HeadBanner from '@/components/HeadBanner/HeadBanner.vue'
-import ProductCard from '@/components/ProductCard/ProductCard.vue'
-
-import { productListConfig } from '@/assets/mocks/productList.config'
-import { computed } from 'vue'
-
-const productListData = computed(() => productListConfig.products)
 </script>
 
 <template>
   <div class="container">
-    <head-banner />
-    <product-list>
-      <product-card
-        v-for="product in productListData"
-        :key="product.id"
-        :title="product.title"
-        :price="product.price"
-        :imgSrc="product.imgSrc"
-      />
-    </product-list>
+    <nav class="home-nav">
+      <router-link to="/">Главная</router-link>
+      <router-link to="/layout">Верстка</router-link>
+      <router-link to="/docs">Swagger</router-link>
+    </nav>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.container {
+.home-nav {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-
-  @include tablet {
-    gap: 44px;
-    align-items: center;
-  }
+  gap: 10px;
 }
 </style>
