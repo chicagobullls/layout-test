@@ -40,7 +40,7 @@ export const swaggerConfig = {
             content: {
               'application/json': {
                 schema: {
-                  $ref: '#/components/schemas/BannersConfig',
+                  $ref: '#/components/schemas/Banners',
                 },
               },
             },
@@ -123,13 +123,22 @@ export const swaggerConfig = {
           schema: {
             $ref: '#/components/schemas/Banner',
           },
-          backgroundGradient: {
-            type: 'string',
-            example: 'linear-gradient(180deg, rgba(173, 180, 148, 0) 0%, #aeb595 100%)',
+          gradients: {
+            type: 'object',
+            properties: {
+              mobile: {
+                type: 'string',
+                example: 'linear-gradient(180deg, rgba(173, 180, 148, 0) 0%, #aeb595 100%)',
+              },
+              desktop: {
+                type: 'string',
+                example: 'linear-gradient(180deg, rgba(173, 180, 148, 0) 0%, #aeb595 100%)',
+              },
+            },
           },
         },
       },
-      AsideBlock: {
+      AsideBanner: {
         type: 'object',
         properties: {
           schema: {
@@ -137,14 +146,14 @@ export const swaggerConfig = {
           },
         },
       },
-      BannersConfig: {
+      Banners: {
         type: 'object',
         properties: {
           mainBlock: {
             $ref: '#/components/schemas/MainBanner',
           },
           asideBlock: {
-            $ref: '#/components/schemas/AsideBlock',
+            $ref: '#/components/schemas/AsideBanner',
           },
         },
       },
