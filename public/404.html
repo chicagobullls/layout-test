@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Layout Test</title>
+  <script>
+    // Единый скрипт для GitHub Pages
+    (function () {
+      // Получаем текущий путь
+      const segment = 1; // Количество сегментов в базовом пути
+      const location = window.location;
+      const pathname = location.pathname.split('/');
+      const redirect = pathname.slice(0, segment + 1).join('/') + '/?p=/' +
+        pathname.slice(segment + 1).join('/').replace(/&/g, '~and~') +
+        (location.search ? '&q=' + location.search.slice(1).replace(/&/g, '~and~') : '') +
+        (location.hash || '');
+
+      window.location.replace(redirect);
+    })();
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
